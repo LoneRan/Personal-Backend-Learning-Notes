@@ -1,0 +1,14 @@
+# Some useful function
+
+## Three ways of interaction
+1)prompt()
+Display a prompt box which ask the usr for info, and output a message.
+```
+let person = prompt("Please balabala", "Default info");
+```
+
+2)alert
+Simply show a message.
+
+3)confirm 
+Show a message and wait for user to press "OK" or "Cancel", return "true" for "OK" or "false" for "Cancel".

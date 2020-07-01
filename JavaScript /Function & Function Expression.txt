@@ -1,0 +1,28 @@
+# Function & Function Expression
+We can define a function like this:
+
+```
+function sayHi() {
+	alert("Hello");
+}
+```
+There is another syntax for creating a function that is called **Function Expression**.
+
+```
+let sayHi = function() {
+	alert( "Hello");
+};
+```
+
+**Note**: In JavaScript, a function is a value, so we can deal with it as a value.
+
+```
+function sayHi() {
+	alert( "Hello");
+}
+
+let func = sayHi; //copy~
+
+func(); //Hello run the copy~
+sayHi(); //Hello
+```

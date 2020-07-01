@@ -1,0 +1,48 @@
+# Data types
+1. String:
+```
+ let str = "hello";
+ let str2 = 'single quotes are ok too';
+ let phrase = `can embed another ${str}`;
+```
+ In JavaScript, double and single quotes are the same, when using backticks(`), we can put other things like string or calculations in ${} and get the correct string. But it doesn't work in double and single quotes.
+2. Number
+ The number type represents both integer and floating point numbers.  <br />
+3. Objects
+ //Objects are used to store collections of data and more complex entitles
+```
+ let user = new Object(); //"object constructor" syntax
+ let user = {]; // "object literal" syntax
+```
+ _Tips: Except Objects, other seven data types are primitive, meaning there is only one line code for them_
+ 
++++
+## Now Focus on Objects
+An object can be created with figure brackets =={..}== with an optional list of properties. A property is a *"key:value"* pair.
+
+```
+let user = {
+	name: "John",
+	age: 30
+}
+
+```
+Property values are accessible using the dot notation:
+```
+alert (user.name); //John
+alert (user.age); //30
+```
+We add an item by simply:
+```
+let user = {];
+user["like birds"] = true;
+```
+### in operator in Objects
+```
+let user = { name: "John", age: 30 };
+alert("age" in user); //true
+alert("balboa" in user); //false
+```
+
+The "for...in" loop
+ 

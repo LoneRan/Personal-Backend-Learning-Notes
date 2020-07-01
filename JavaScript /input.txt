@@ -1,0 +1,14 @@
+# input
+Events: cut, copy, paste
+
+The code below shows how to prevent from cutting, copying, pasting:
+
+```
+<input type = "text" id = "input">
+<script>
+	input.oncut = input.oncopy = input.onpaste = function(event) {
+		alert(event.type + ' - ' + event.clipboardData.getData('text/plain'));
+		return false;
+	}
+</script>
+```

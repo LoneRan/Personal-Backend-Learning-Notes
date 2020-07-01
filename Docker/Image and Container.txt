@@ -1,0 +1,15 @@
+Image and Container:
+我们可以简单地说：镜像是一个类，而容器就是镜像的实例。
+镜像是一个只读的模版，是一个独立的操作系统。
+容器是由镜像创建的运行实例，会在所有的镜像层上增加一个可写层
+
+/Screen Shot 2020-05-08 at 16.14.53.png
+
+Dockerfile: 用于描述镜像的生成规则。 Dockerfile中的每一条命令，都在Docker镜像中以一个独立镜像层的形式存在。
+Image: 由Dockerfile生成, 呈现层级结构, 每层镜像包含：镜像文件以及镜像json元数据信息。
+Container: Container 是Image 的动态运行结果，概括而言，就是在Docker镜像之上，运行进程。
+
+
+Container:
+
+images:

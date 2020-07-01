@@ -1,0 +1,13 @@
+# Arrow Ruction
+An arrow in javascript creates a function which accepts argus and then evaluates the expression on the right side with their use and return its result.
+
+```
+let func = (arg1, arg2, ... argN) => expression
+```
+Which is equal to 
+```
+let func = function(arg1, arg2, ... argN) {
+ return expression;
+};
+```
+ 

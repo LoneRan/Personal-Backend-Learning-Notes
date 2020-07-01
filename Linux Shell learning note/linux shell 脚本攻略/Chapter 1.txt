@@ -1,0 +1,82 @@
+Chapter 1:
+echo用于终端打印命令。(自动增加换行符）
+注意echo的三种使用：1）“”双引号：特殊符号要加转译（\）
+ 2）‘’单引号：不对变量求值
+ 3）什么都不加：无法在文本中使用，
+echo -e “包含转义字符的字符串”
+printf
+
+标准重定向：
+文件描述符0、1、2皆为系统预留的。
+0-----stdin；
+1-----stdout；
+2-----stderr；
+
+E.g. $ ls + 2> out.txt 将错误输出写入out.txt
+
+读取序列命令输出
+
+组合多个命令及读取输出
+$cmd1 | cmd2 | cmd3
+
+子shell
+使用（）可以轻松创建一个子shell，子shell不会对外部shell造成影响
+例如：$pwd;
+$(cd/bin;ls;)
+$pwd;
+
+Read读取字符
+	read -n 2 var
+	echo $var
+	
+	read -s var (密码形式)
+	
+	read -p "enter sth." var (now we have some hints)
+	
+	read -t timeout var (input in limited time)
+	
+	read -d ":" var (input end with defined character)
+	
+内部字段分隔符（Internal Field Separater, IFS)
+可用来轻松分隔一段文字，自行定义IFS
+IFS = “：”；便可以用：来分隔文字，如果不定义，会将每个字符单独输出
+
+if [condition]
+Then
+Command
+Fi
+
+For var in list
+Do 
+Commands
+Done
+
+
+Find命令可列出目录下的相印文件
+-type f
+-atime -7
+-amin +10
+-name "*.txt"
+Etc.
+
+xargs命令把stdin接收到的数据重新格式化，再将其作为其他参数提供给其他命令
+Command | xargs
+
+例：统计所有C程序文件的行数
+find source_code_dir_path -type f -name "*.c" print0 | xargs -0 wc -1
+
+
+tr命令
+可以将一组字符转换成另一组字符
+例如： echo "ABCDEF" | tr 'A-Z' 'a-z'
+We will get "abcdef"
+
+删除字符：tr -d '[set]'
+-c补集
+
+压缩字符：tr -s ' ' (压缩文本中的空格，将多个连续空格变为一个)
+
+
+文本文件排序：
+sort命令
+Uniq命令从文本中提取单一的行

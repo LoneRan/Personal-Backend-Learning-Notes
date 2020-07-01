@@ -1,0 +1,18 @@
+# Async/await
+This is key word can be placed before a function,
+```
+async function f() {
+	return 1;
+}
+```
+Which means a function always return a promise. Other values are  wrapped in a resolved promise automatically.
+
+## Await
+```
+//work only inside async functions
+let value = await promise;
+```
+The key word `await` makes JavaScript wait until that promise settles and returns its result, then go on with the result. That doesn't cost any CPU resources, because the engine can do other jobs in the meantime; execute other scripts, handle events, etc.
+
+It's just an elegant syntax of getting the promise result than `promise.then`, easier to read and write.
+

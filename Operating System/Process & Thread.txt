@@ -1,0 +1,6 @@
+# Process & Thread
+Process is abstraction of **memory**;
+Thread is abstraction of **Processor**;
+
+exit() system call: the process calls it and self-terminate;
+wait() system call: wait for any child process to die, return the pid of a dead process

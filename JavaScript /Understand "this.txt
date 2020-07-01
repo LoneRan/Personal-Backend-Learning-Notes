@@ -1,0 +1,28 @@
+# Understand "this"
+"this" is used when an object method needs to access the information stored in the object to do its job
+```
+let user = {
+	name: 'John',
+	age: 30,
+	
+	sayHi() {
+		alert(this.name;
+	}
+};
+
+User.sayHi(); //John
+```
+Here during the execution of user.sayHi(), the value of `this` will be `user`.
+
+`this` can be used in any function without error:
+```
+function sayHi() {
+	alert(this.name);
+}
+```
+The value of `this` is evaluated during the run-time, depending on the **context**.
+
+The rule is actually simple: if `obj.f()` is called, then `this` is `obj` during the call of `f`.
+
+
+## Arrow function have no `this`

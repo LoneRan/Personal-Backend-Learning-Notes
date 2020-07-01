@@ -1,0 +1,70 @@
+# Props, Callback
+We can use props and callback function to passing data from parent to its child or child to its parent.
+
+## From parent to child using props
+In parent.js:
+```
+class Parent extends React.Component {
+state = { data : "Hello World" } 
+render() {
+        
+        return (
+            <div>
+                 <Child1/>            //no data to send             
+                 <Child2 dataFromParent = {this.state.data} />
+            </div>
+        );
+    }
+}
+```
+In child.js:
+
+```
+class Child2 extends React.Component {
+render() {   
+        return (
+            <div>
+                The data from parent is:{this.props.dataFromParent}
+            </div>
+        );
+    }
+}
+```
+Simply, use `this.props.dataFromParent` to access the data sent from Parent to Child. 
+
+## From child to parent using callbacks
+- Step 1: Define a callback function that takes in a parameter which we consider having accessed from the child in the Parent.js
+- Step 2: Also, send the defined callback function as a props to the Child1.js
+
+Parent.js
+```
+class Parent extends React.Component {
+state = { message: "" }
+callbackFunction = (childData) => {
+      this.setState({message: childData})
+},
+render() {
+        return (
+            <div>
+                 <Child1 parentCallback = {this.callbackFunction}/>
+                 <p> {this.state.message} </p>
+            </div>
+        );
+}
+}
+```
+- Step 3: In Child1.js send the data using this.props.callback(dataToParent)
+
+Child1.js
+```
+class Child1 extends React.Component{
+sendData = () => {
+         this.props.parentCallback("Hey Popsie, How’s it going?");
+    },
+render() { 
+//you can call function sendData whenever you'd like to send data from child component to Parent component.
+    }
+};
+```
+
+ 

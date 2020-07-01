@@ -1,0 +1,22 @@
+# var and let
+var is kind of old school way of initialize a variable. Usually var and let is basically the same, user can replace var by let, vice versa. 
+
+There are also some slight difference between var and let:
+
+- "var" can tolerate redeclaration
+If we use let to declare same variable twice, that's an error!
+```
+let var1;
+let var1; //SyntaxError: 'var1' has already been declared.
+```
+
+- "var" can be declared below their use:
+```
+function sayHi() {
+	phrase = "hello";
+	alert phrase;
+	var phrase;
+}
+
+sayHi();
+```

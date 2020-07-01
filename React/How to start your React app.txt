@@ -1,0 +1,10 @@
+# How to start your React app
+Type in the following command to your terminal in current folder:
+```
+npx create-react-app my-app
+cd my-app
+npm start
+```
+
+When error message `nix command not found` pops out, use
+`sudo npm i -g npx` to set up environment.

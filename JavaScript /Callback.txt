@@ -1,0 +1,23 @@
+# Callback
+Many functions in javascript allow user to schedule asynchronous
+Actions.
+
+Due to that, it's very common that we write asynchronous
+Functions in our code, in that case, it's impossible to do that:
+```
+loadScript('/my/script.js'); //the script has "function newFunction() {...}"
+
+newFunction(); //no such function!
+```
+Then add call back to solve this situation:
+```
+loadScript('/my/script.js', function(){
+//the call back runs after the script is loaded
+	newFunction();
+	...
+});
+
+```
+
+
+In function, a callback is expected to be "called back" later if necessary.

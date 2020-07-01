@@ -1,0 +1,77 @@
+# Data structure
+
+## Array
+
+
+## linked list
+Constructor and methods:
+```
+LinkedList<String> ll 
+    = new LinkedList<String>(); 
+
+// Adding elements to the linked list 
+ll.add("A"); 
+ll.add("B"); 
+ll.addLast("C"); 
+ll.addFirst("D"); 
+ll.add(2, "E"); 
+```
+
+## Hashmap
+A HashMap, store items in "key/value" pairs, and you can access them by an index of another type (e.g. a String).
+
+Constructors:
+```
+HashMap<String, String> capitalCities = new HashMap<String, String>();
+```
+
+Add items, use `put()` method;
+```
+capitalCities.put("China", "Beijing");
+```
+
+Access a value in the Hashmap, use `get()` method;
+```
+capitalCities.get("China");
+```
+
+To remove an item, use the remove() method and refer to the key;
+
+Loop Through a HashMap;
+```
+for (String i : capitalCities.keySet()) {
+  System.out.println(i);
+}
+```
+
+## stack
+
+
+## set
+
+- hashset
+Hashset can only store unique value (number or string), which is a good implementation for many uses.
+
+Constructers:
+```
+HashSet h = new HashSet(); 
+HashSet<String> h = new HashSet<String>(); 
+//Default initial capacity is 16 and default load factor is 0.75.
+HashSet h = new HashSet(int initialCapacity); 
+//default loadFactor of 0.75
+HashSet h = new HashSet(int initialCapacity, float loadFactor);
+HashSet h = new HashSet(Collection C);
+```
+Methods in Hashset:
+```
+h.add("China");
+h.add("U.S.");
+
+h.contains("China");
+
+h.remove("U.S.");
+
+Iterator<String> i = h.iterator(); 
+while (i.hasNext()) 
+    System.out.println(i.next());
+```

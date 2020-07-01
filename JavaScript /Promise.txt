@@ -1,0 +1,55 @@
+# Promise
+
+Promises allow us to do things in the natural order. Inmagine this, the singer will tell his/her fans to subscribe with their email to get notifications is he/she release a new single.
+
+In JavaScript, 
+1. A " producing code" that does something and takes time. For instance, some code that loads the data over a network. That's a "singer"
+2. A "consuming code" that wants the result of the "producing code" once it's ready. Many functions may need that result. These are the "fans".
+3. A promise is a special JavaScript object that links the "producing code" and the "consuming code" together. In terms of our analogy: this is the "subscription list"but way more than that.
+
+So basically, a Promise is a promise in the future, someday it will produce the result and give it to somebody who needs it.
+
+Constructor for a promise object:
+```
+let promise = new Promise(function(resolve, reject) {
+	//executor (the producing code)
+});
+```
+**resolve** and **reject are callbacks of JavaScript.
+
+## Consumers: then, catch, finally
+
+### then
+Syntax:
+```
+promise.then(
+	function(result) { /*handle a successful result */}
+	function(error) { /* handle an error */ }
+);
+```
+
+### catch
+Catch is used for catching error, when we are only interested in error.
+
+### finally
+The call ```.finally(f)``` is similar to ```.then(f,f)``` in the sense that ```f``` always runs when the promise is settled: be it resolve or reject.
+
+# promises chain
+```
+new Promise(function(resolve, reject){
+	setTimeout(() => resolve(1), 1000);
+}).then(function(result){
+	alert(result); //1
+	return result * 2;
+}).then(function(result){
+	alert(result); //2
+	return result * 2;
+}).then(function(result){
+	alert(result); //4
+	return result * 2;
+});
+```
+
+# Promisification
+
+

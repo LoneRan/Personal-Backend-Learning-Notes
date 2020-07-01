@@ -1,0 +1,14 @@
+Docker pull [images]
+Docker run [images] (e.g. tomcat, ubuntu etc)
+Docker run ubuntu -bash
+Actually if there is no image locally, it will automatically download images from docker hub.
+
+Docker images ls
+(List all images)
+
+Docker ps -a
+(List all containers including the one which is stopped
+
+Docker stop [container]
+
+

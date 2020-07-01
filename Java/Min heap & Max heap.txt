@@ -1,0 +1,15 @@
+# Min heap & Max heap implementation
+In java, we can use PriorityQueue to implement min heap:
+```
+PriorityQueue<Integer> queue = new PriorityQueue<>();
+```
+Some functions can be called:
+`queue.poll()`:remove and return the top of the queue.
+`queue.peek()`:return the top of the queue but not remove it.
+`queue.add()`:add a value to the queue.
+
+We can also use PriorityQueue to implement max heap:
+```
+PriorityQueue<Integer> queue = new PriorityQueue<>(10, 
+	Collections.reverseOrder());
+```
