@@ -108,7 +108,7 @@ I am an animal.
 ```
 This happens cuz when calling `my_features()`, there is ambiguity. 
 
-Virtual function dynamically **binds function call at runtime** and allows it to be **overridden** by the member function of the derrived class:
+Virtual function dynamically **binds function call at runtime** and allows it to be **overridden** by the member function of the derived class:
 ```
 #include <iostream>
 using namespace std;
